@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="Rectangle.js"></script>
+</head>
+<body>
+<canvas id="myCanVas" width="800" height="500" style="border: 1px solid red"></canvas><br>
+<script>
+
+let rectangle = new Rectangle(700,400)
+let width=rectangle.getWidth()
+let height=rectangle.getHeight()
+let perimeter = rectangle.getPerimeter();
+let area = rectangle.getArea();
+document.write('chiều dài của hình chữ nhật là:'+width+'<br>');
+document.write('chiều rộng của hình chữ nhật là:'+height+'<br>')
+document.write('chu vi hình chữ nhật là:'+perimeter+'<br>')
+document.write('diện tích hình chữ nhật là;'+area+'<br>')
+
+let canvas = document.getElementById('myCanVas');
+let ctx = canvas.getContext("2d");
+ctx.beginPath()
+ctx.strokeRect(40,40,rectangle.getWidth(),rectangle.getHeight())
+ctx.closePath()
+</script>
+</body>
+</html>
